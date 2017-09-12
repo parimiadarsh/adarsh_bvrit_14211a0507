@@ -61,7 +61,7 @@ public class StudentGroup implements StudentArrayOperation {
 		if(student == null)
 			throw new IllegalArgumentException("Invalid");
 		else { 
-			for(int i=this.students.length-1;i>=0;i--) {
+			for(int i=this.students.length-2;i>=0;i--) {
 				this.students[i+1] = this.students[i];
 			}
 			this.students[0] = student;
@@ -124,7 +124,7 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException("Invalid Date");
 		else {
 			for(int i=0;i<this.students.length;i++) {
-				if(this.students[i] == date)
+				//if(this.students[i] == date)
 					
 			}
 			return null;
