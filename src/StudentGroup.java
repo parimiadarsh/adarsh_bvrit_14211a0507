@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class StudentGroup implements StudentArrayOperation {
 
-	private Student[] students;
+	private Student[] students,students1;
 	
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
@@ -61,7 +61,7 @@ public class StudentGroup implements StudentArrayOperation {
 		if(student == null)
 			throw new IllegalArgumentException("Invalid");
 		else { 
-			for(int i=this.students.length-2;i>=0;i--) {
+			for(int i=this.students.length-1;i>=0;i--) {
 				this.students[i+1] = this.students[i];
 			}
 			this.students[0] = student;
@@ -72,7 +72,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public void addLast(Student student) {
 		// Add your implementation here
 		if(student == null)
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Invalid");
 		else
 			this.students[this.students.length-1] = student;
 	}
@@ -120,7 +120,15 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
-		return null;
+		if(date == null)
+			throw new IllegalArgumentException("Invalid Date");
+		else {
+			for(int i=0;i<this.students.length;i++) {
+				if(this.students[i] == date)
+					
+			}
+			return null;
+		}
 	}
 
 	@Override
