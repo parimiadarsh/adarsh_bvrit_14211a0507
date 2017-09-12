@@ -32,12 +32,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
-//		for(int i=0;i<this.students.length;i++) {
-//			if(students[i] == null)
-//				throw new IllegalArgumentException("invalid input");
-//			else
-//				this.students[i] = students[i];
-//		}
+		for(int i=0;i<this.students.length;i++) {
+			if(students[i] == null)
+				throw new IllegalArgumentException("invalid input");
+			else
+				this.students[i] = students[i];
+		}
 	}
 
 	@Override
@@ -48,11 +48,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void setStudent(Student student, int index) {
-		// Add your implementation here
-//		if(student == null||index<0||index>this.students.length)
-//			throw new IllegalArgumentException("Invalid");
-//		else
-//			this.students[index] = student;
+		//Add your implementation here
+		if(student == null||index<0||index>this.students.length)
+			throw new IllegalArgumentException("Invalid");
+		else
+			this.students[index] = student;
 	}
 
 	@Override
