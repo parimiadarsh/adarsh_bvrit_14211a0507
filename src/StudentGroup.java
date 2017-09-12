@@ -61,7 +61,7 @@ public class StudentGroup implements StudentArrayOperation {
 		if(student == null)
 			throw new IllegalArgumentException("Invalid");
 		else { 
-			for(int i=this.students.length;i>0;i--) {
+			for(int i=this.students.length-1;i>0;i--) {
 				this.students[i] = this.students[i+1];
 			}
 			this.students[0] = student;
@@ -71,6 +71,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		
 	}
 
 	@Override
