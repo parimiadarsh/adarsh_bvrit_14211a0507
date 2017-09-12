@@ -58,6 +58,14 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+		if(student == null)
+			throw new IllegalArgumentException("Invalid");
+		else { 
+			for(int i=this.students.length;i>0;i--) {
+				this.students[i] = this.students[i+1];
+			}
+			this.students[0] = student;
+		}
 	}
 
 	@Override
